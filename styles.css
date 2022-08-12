@@ -107,6 +107,10 @@ span{
     z-index: -1;
     transition: 0.8s;
 }
+.btn{
+    background: #017143;
+
+}
 
 button:hover span{
     width: 100%;
@@ -114,4 +118,143 @@ button:hover span{
 
 button:hover {
     border: none;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.container .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.container .textBox h2 {
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+
+}
+
+.span1 {
+    color: #017143;
+    font-size: 1.0em;
+    font-weight: 900;
+    justify-content: center;
+}
+.container .textBox p {
+    color: #333;
+}
+
+.content1 .textBox a {
+    display: inline-block;
+}
+
+.container .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.container .imgBox img {
+    max-width: 540px;
+    height: 500px;
+}
+
+/*------------------------Services section---------------------------*/
+#services {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(public/star.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #efefef !important;
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#services h2 {
+    text-align: center;
+    color: #efefef !important;
+    padding-bottom: 50px;
+
+}
+
+#services h2::after {
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+
+.services{
+    margin-top: 0;
+}
+
+/*To set the details and create a circle around the icons*/
+.icon{
+    font-size: 40px; /*To set the font weight of the icon*/
+    margin: 20px auto; /*To set margin between the card text and the icon*/
+    padding: 20px; /*To set the area around an icon when inside the circle*/
+    height: 80px; /* To set the height of the circle and make it appear as a circle*/
+    width: 80px; /* To set the width of the circle and make it appear as a circle*/
+    border: 1px solid #fff; /*To set the color, the border and border color of the circles around the icons */
+    border-radius: 50%; /*Set at 50% to make the bounderies circular*/
+}
+
+#services p {
+    font-size: 14px; /*To set the font size of paragraphs*/
+    margin-top: 20px; /*To set the margins of paragraphs*/
+    margin-left: 4px; /*To set the margins of paragraphs*/
+    margin-right: 4px; /*To set the margins of paragraphs*/
+    color: #ccc;
+}
+
+
+/* To set the hover effect on the cards */
+#services .col-md-3:hover { /*SELECT THE ENTIRE CARD */
+    background: #095172; /* To set the color of the hover*/
+    cursor: pointer; /*To make cursor change to pointer when on hover */
+    transition: 0.9s; /*To set the speed of the hover effect */
+    border-radius: 10%; /* To set the corners of the hover boxes */
+}
+
+/*-----------------About Section-------------------*/
+#about{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: rgb(59, 58, 58);
+}
+
+#btn11 {
+    margin-top: 20px; /* Margin of button from top */
+    margin-bottom: 30px; /* Margin of button from bottom */
+    border-radius: 20px;  /* Box radius of the button */
+}
+
+.about-content {
+    padding-top: 20px; /* Margin of paragraph from top  */
+}
+
+.skills-bar p {
+    margin-top: 6px; /* Margins of the progress bars */
+    font-weight: 600; /* Weight of the progress bars headings */
+}
+
+.progress-bar {
+    border-radius: 16px; /*To set the border radius inside the progress bars */
+}
+
+.progress{
+    border-radius: 16px !important;
+    margin-bottom: 10px;
 }
