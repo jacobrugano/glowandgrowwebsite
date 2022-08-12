@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%; /*To set the width of the background image*/
+    height: 100vh; /*To set the height of the background image*/
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(public/ship2.jpg);
+                       /*linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) TO FADE OFF THE BACKGROUND IMAGE*/
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%; /* To set the width of the navbar*/
+    margin: auto;
+    padding: 35px 0; /*To set the padding top and padding right*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* To seperate the logo image and the navbar wordings*/
+}
+
+.logo {
+    width: 70px; /* To set the width of the logo*/
+    cursor: pointer; /*To make the cursor a pointer when on top of logo*/
+    height: 40px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block; /*To make the nav words appear left to right horizontally instead of top to bottom vertical*/
+    margin: 0 20px; /*To set the margins between the navbar wordings*/
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none; /*To remove the underline under the words that were there due to <a> tags in html */
+    color: #fff; /* To determine the color of the navbar wordings*/
+    text-transform: uppercase; /* To put all the words in navbar into uppercase*/
+}
+
+.navbar ul li::after{
+    content: ''; /* To make the underline appear*/
+    height: 3px; /*To set the width of the line*/
+    width: 0; /*To set the width of the underline to zero so that the line can disappear and only appear on hover*/
+    background: #009688; /*To set the color of the underline*/
+    position: absolute;
+    left: 0; /*To set the space of the underline from left*/
+    bottom: -10px; /*To set the space of the underline from bottom*/
+    transition: 0.8s; /*To set the speed the underline should appear at*/
+}
+
+.navbar ul li:hover:after {
+    width: 100%; /*To set the width of the underline to zero so that the line can disappear and only appear on hover.
+                    NOTE: IF you put 100px, the line will go beyond*/
+
+}
+
+.content {
+    width: 100%; /*To set the width of the wordings on the Homepage image*/
+    position: absolute;
+    top: 50%;  /*To set the space from top of the wordings on the Homepage image*/
+    transform: translateY(-10%); /*a 2d translation which moves an element on the y-axis by the given value. 
+                    Note that the y-axis increases vertically downwards: positive lengths shift the element down, while negative lengths shift it up.*/
+    text-align: center;  /*To center the position of the wordings on the Homepage image*/
+    color: #fff;  /*To set the color of the wordings on the Homepage image*/
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    margin-top: 5px;
+}
+
+button {
+    width: 200px; 
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;  
+    height: 50px;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
