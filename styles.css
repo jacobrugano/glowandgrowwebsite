@@ -236,7 +236,9 @@ button:hover {
 #btnn, #btn11 {
     box-shadow: 0 0 0.5rem 0.4rem rgba(27, 27, 27, 0.3);
 }
-
+#and{
+    font-size: 82px;
+}
 /*------------------------Services section---------------------------*/
 #services {
     background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(public/star.jpg);
