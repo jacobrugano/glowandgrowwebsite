@@ -188,9 +188,13 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
     
 }
 
+#newone{
+    background: #efefef; 
+}
 .container .textBox {
     position: relative;
     max-width: 600px;
