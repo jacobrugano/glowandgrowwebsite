@@ -230,6 +230,11 @@ button:hover {
 .container .imgBox img {
     max-width: 540px;
     height: 500px;
+    box-shadow: 0 0 0.5rem 0.4rem rgba(27, 27, 27, 0.3);
+}
+
+#btnn, #btn11 {
+    box-shadow: 0 0 0.5rem 0.4rem rgba(27, 27, 27, 0.3);
 }
 
 /*------------------------Services section---------------------------*/
