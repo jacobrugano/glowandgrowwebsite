@@ -4,14 +4,7 @@
     font-family: sans-serif;
 }
 
-.banner {
-    width: 100%; /*To set the width of the background image*/
-    height: 100vh; /*To set the height of the background image*/
-    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(public/ship2.jpg);
-                       /*linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) TO FADE OFF THE BACKGROUND IMAGE*/
-    background-size: cover;
-    background-position: center;
-}
+
 
 .navbar {
     width: 85%; /* To set the width of the navbar*/
@@ -58,27 +51,99 @@
 
 }
 
-.content {
-    width: 100%; /*To set the width of the wordings on the Homepage image*/
+/* Start of styling for new Home page */
+/* Start of styling for new NAVBAR */
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 100%;
     position: absolute;
-    top: 50%;  /*To set the space from top of the wordings on the Homepage image*/
-    transform: translateY(-10%); /*a 2d translation which moves an element on the y-axis by the given value. 
-                    Note that the y-axis increases vertically downwards: positive lengths shift the element down, while negative lengths shift it up.*/
-    text-align: center;  /*To center the position of the wordings on the Homepage image*/
-    color: #fff;  /*To set the color of the wordings on the Homepage image*/
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 80px;
+}
+
+nav ul li {
+    list-style: none; /* To remove the dots behind the list brought in by ul and li */
+    display: inline-block; /* To align the items in the navbar  in a line from left to right */
+    margin-left: 40px; /* To create the spaces between the words in the navbar*/
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes the anchor tags caused by the a<href=""> tags */
+    color: #fff; /* To set the color of the wordings in the navbar */
+    font-size: 17px;  /* To set the font-size of the wordings in the navbar */
+}
+
+.content {
+    text-align: center;
 }
 
 .content h1 {
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
 }
 
-.content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-    margin-top: 5px;
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff; /* To create a boundary around the heading when on hover
+                                        ...boundary of color white of width 2px */
+    color: transparent; /* To make the heading become transparent when on transparent */
 }
+
+.content a {   /* To create the button */
+    text-decoration: none;/* Removes the anchor tags caused by the a<href=""> tags */
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff; /* Creates the line around the words to create a button */
+    padding: 14px 70px; /* To create the spacing inside the button */
+    border-radius: 50px; /* To create the box radius of the button */
+    margin-top: 20px; /* To set the margin above the button */
+}
+
+.content a:hover{
+    background-color: #015a51;  /* To set the hover effect color */
+    transition: 0.3s all linear;  /* To set the hover effect speed */
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom:0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){ /* To make the video cover the whole page and set the media queries */
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){ /* To set the media queries */
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+/* End of styling for new Home page */
+
 
 button {
     width: 200px; 
@@ -107,10 +172,7 @@ span{
     z-index: -1;
     transition: 0.8s;
 }
-.btn{
-    background: #017143;
 
-}
 
 button:hover span{
     width: 100%;
@@ -132,6 +194,7 @@ button:hover {
 .container .textBox {
     position: relative;
     max-width: 600px;
+    
 }
 
 .container .textBox h2 {
@@ -258,3 +321,327 @@ button:hover {
     border-radius: 16px !important;
     margin-bottom: 10px;
 }
+
+/*------styling for the pricing Div-------*/
+#price {
+    padding: 40px 190px; /* To set the padding around the Div*/
+    background: #efefef; /*To set the background color of the div */
+}
+
+/*------To set the styling of the card------*/
+.single-price {
+    margin: 10px auto; /* To set the margin of the card from the heading */
+    display: inline;
+    float: left;
+    width: 100%; /* To set the width of the card */
+    background-color: #fff; /* To set the background color of the card */
+    transition: 0.5s; /* Set the transition of the card */
+    box-shadow: 0 2px 15px #333; /*Sets the background to be a box-shadow of color greyish when hovered */
+    border-radius: 16px; /*To set the border radius inside the progress bars */
+}
+
+/*-----To set the effect when on hover on the card-----*/
+.single-price:hover {
+    box-shadow: 0 0 0 0; /*Sets the background to be a box-shadow of color greyish when hovered */
+}
+
+
+/*------To design the card header area----------*/
+.price-head {
+    background-color: #41515e;
+    display: inline;
+    float: left;
+    padding: 10px 5px; /* To set the padding inside the card header */
+    text-align: center;
+    width: 100%;
+    border-radius: 10px; /*To set the border radius inside the progress bars */
+
+}
+
+
+/*----------To design the heading inside the card------*/
+.price-head h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+/*----------To design the header-paragraph inside the card------*/
+.price-head p {
+    font-size: 20px;
+    color: #ccc;
+    font-weight: bold;
+    line-height: 30px; /*To set the height of the statement Kshs 1500/Cohort */
+}
+
+/*--------To design the content paragrapgh inside the card--------*/
+.price-content {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    margin: 5px;
+}
+.price-content ul li {
+    border-bottom: 2px solid #efefef; /* To create a line under each wording, its width, solid and its color */
+    padding: 5px 5px; /*To determine the padding between the wording inside the paragraph in the card */
+    list-style: none; /*To rremove the dot dots brought by ul li listing */
+}
+
+ul li:last-child {
+    border: none;
+}
+
+/*--------To design the icons in the card-------------------*/
+.fa-check-square{  /*Pick the icon by the bootstrap class name */
+    color: green; /*Color of the icon*/
+    margin-right: 10px; /* To set the margin between the icons and the words */
+    font-size: 10px; /*To set the size of the icons */
+}
+
+.fa-times-circle {
+    color: rgb(148, 16, 16); /*Color of the icon*/
+    margin-right: 10px; /* To set the margin between the icons and the words */
+    font-size: 10px; /*To set the size of the icons */
+
+}
+
+#buy{
+    width: 130px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 40px;
+}
+#price h1 {
+    text-align: center;
+    color: #030303 !important;
+    padding-bottom: 10px;
+
+}
+
+#price h1::after {
+    content: '';
+    background: #444242;
+    display: block;
+    height: 3px;
+    width: 200px;
+    margin: 20px auto 5px;
+}
+
+/*---------------Testimonials section-----------------------*/
+#testimonials {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+ /*------To push the heading of the div to the center......*/
+  /*-----Have had to put container-fluid instead of container only---*/
+#testimonials h1 {
+    text-align: center; /*To push the title to the center*/
+    color: #202020 !important;  /*To set the color of the heading*/
+    padding-bottom: 10px;  /*To set the padding to the bottom---*/
+}
+
+
+ /*---To create an underline under the div heading------*/
+#testimonials h1::after {
+    content: '';  /*--To remind code that it is an empty line----*/
+    background: #525151; /*---To set the color of the line---*/
+    display: block;  /*---To set the line to be a continuous line---*/
+    height: 2px;  /*---To set the height of the line---*/
+    width: 170px; /*---To set the width of the line---*/
+    margin: 20px auto 5px; /*---To set the margins of the line---*/
+}
+
+#testimonials .row {
+    margin-top: 30px;
+} 
+
+.col-md-4 {
+margin: 40px auto;
+}
+
+.profile {
+    padding: 70px 10px 10px;
+    background-color: #efefef;
+}
+
+.profile img {
+    top: -60px;
+    position: absolute;
+    left: calc(50% - 60px);
+    border: 10px solid #fff;
+}
+
+.user{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.profile h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #007bff;
+}
+
+blockquote{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+blockquote::before{
+    content: '\93';
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 20px;
+    bottom: -15px;
+    right: 5px;
+}
+
+/* Start of Contacts part styling */
+/* Google Forms */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); 
+                            /* To set the font of all the content inside the contacts Div */
+                            /* Click https://fonts.google.com/, then search Poppins and click it, then
+                                scroll down to Styles...then select the styles you prefer */
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.contacts {
+    width: 100%;
+    height: 90vh; /*To set the height of the contacts Div*/
+    display: flex;
+    /* place-items: center; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* background: #2c2f48;  To set the background color of the Div */
+    background: url(public/beach2.jpg) no-repeat center center/cover;
+}
+
+.contact-container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    /* background: #363953; */
+    /* box-shadow: 0 0 1rem hsla(0 0 0 / 16%); */
+    border-radius: 0.9rem;
+    overflow: hidden;
+
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px); /* To create the blur in the box inside the contacts Div */
+    flex-wrap: wrap;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-container h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-form{
+    display: grid; /* To organize the boxes downwards since they are disorganized at this point*/
+    row-gap: 1rem; /* To set the spaces between the boxes */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    border: none;
+    outline: none; /* To set the color of the borders of the boxes*/
+    background:#343449;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    border-radius: 0.4rem;
+
+    height: 40px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 0.6rem .5rem .7rem rgba(7, 3, 3, 0.3);
+}
+
+.contact-form textarea {
+    resize: none; /* To set the direction the text area box should expand to. In this case, it is set not to expand */
+    height: 150px; /* To set the height of the text box area */
+} 
+
+.contact-form input::placeholder { /* To set styling for the placeholders */
+    color: rgb(160, 158, 158);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-form textarea::placeholder {
+    color: rgb(160, 158, 158);
+}
+
+/* To design the SEND button */ 
+.contact-form .send-button {
+    border: none;
+    outline: none;
+    /* outline-width: 10px;
+    outline-color: #030303; */
+    background-color: #00dbde; /* To set the color of the button */
+    font-size: 1rem;  /* To set the font-size of the wording inside the button */
+    font-weight: 500;  /* To set the font-weight of the wording inside the button */
+    text-transform: uppercase;  /* To set the contents of the wording inside the button to be capitals */
+    cursor: pointer;
+    box-shadow: 0 0.6rem .5rem .7rem #151616;
+}
+.contact-form .send-button:hover {  /* To set the hover effect */
+    background-color: #015a51;  /* To set the hover effect color */
+    transition: 0.3s all linear;  /* To set the hover effect speed */
+}
+
+/* To style the map */ 
+.map iframe {
+    width: 100%; /* To set the width of the map */
+    height: 100%; /* To set the height of the map */
+    border-radius: 0.4rem;
+}
+
+
+/* To make the website responsive */
+/* Media Queries */
+
+
+/* To set the responsiveness for a screen of size 964px */
+@media (max-width: 964px) {
+    .contact-container, .container-fluid, .row, .container, .banner, .col-md-3 {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+/* To set the responsiveness for a screen of size 964px */ 
+/* @media (max-width: 700px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 20rem !important;
+    }
+    .map iframe {
+        height: 400px;
+    }
+} */
+

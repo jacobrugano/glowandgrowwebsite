@@ -1,0 +1,31 @@
+
+.banner {
+    width: 100%; /*To set the width of the background image*/
+    height: 100vh; /*To set the height of the background image*/
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(public/ship2.jpg);
+                       /*linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) TO FADE OFF THE BACKGROUND IMAGE*/
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    width: 100%; /*To set the width of the wordings on the Homepage image*/
+    position: absolute;
+    top: 50%;  /*To set the space from top of the wordings on the Homepage image*/
+    transform: translateY(-10%); /*a 2d translation which moves an element on the y-axis by the given value. 
+                    Note that the y-axis increases vertically downwards: positive lengths shift the element down, while negative lengths shift it up.*/
+    text-align: center;  /*To center the position of the wordings on the Homepage image*/
+    color: #fff;  /*To set the color of the wordings on the Homepage image*/
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    margin-top: 5px;
+}
